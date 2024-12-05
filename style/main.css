@@ -21,11 +21,12 @@ body, html {
   background-color: rgba(0, 0, 0, 0.3); /* Warna hitam transparan */
 }
 .content {
-  position: static; /* Remove relative positioning to work with flexbox */
+  position: relative;
   color: white;
   text-align: center;
-  transform: none; /* Remove translateY since flexbox centers it */
+  margin: 0 auto;
 }
+
 
 html {
   box-sizing: border-box;
@@ -46,14 +47,12 @@ body {
   overflow: hidden;
   position: relative;
   text-align: center;
-  visibility: hidden;
+  display: flex; /* Align children */
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
   width: 100vw;
-
-  display: flex; /* Add flexbox for alignment */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  padding-top: 5vh; /* Optional: adjust vertical position if needed */
 }
+
 
 
 .container > div {

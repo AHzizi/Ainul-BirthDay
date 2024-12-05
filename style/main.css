@@ -21,12 +21,10 @@ body, html {
   background-color: rgba(0, 0, 0, 0.3); /* Warna hitam transparan */
 }
 .content {
-  position: static; /* Ensure it's aligned properly within flexbox */
-  transform: none; /* Remove top and transform properties */
+  position: static; /* Remove relative positioning to work with flexbox */
   color: white;
   text-align: center;
-  top: 50%;
-  transform: translateY(-50%);
+  transform: none; /* Remove translateY since flexbox centers it */
 }
 
 html {
@@ -43,19 +41,20 @@ body {
 }
 
 .container {
+  height: 100vh;
   margin: 0 auto;
   overflow: hidden;
   position: relative;
   text-align: center;
   visibility: hidden;
   width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Full screen height */
-  text-align: center;
-  
+
+  display: flex; /* Add flexbox for alignment */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  padding-top: 5vh; /* Optional: adjust vertical position if needed */
 }
+
 
 .container > div {
   left: 0;

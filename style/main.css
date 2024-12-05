@@ -24,9 +24,9 @@ body, html {
   position: relative;
   color: white;
   text-align: center;
-  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
 }
-
 
 html {
   box-sizing: border-box;
@@ -47,12 +47,14 @@ body {
   overflow: hidden;
   position: relative;
   text-align: center;
-  display: flex; /* Align children */
-  justify-content: center; /* Horizontal centering */
-  align-items: center; /* Vertical centering */
+  visibility: hidden;
   width: 100vw;
-}
 
+  display: flex; /* Add flexbox for alignment */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  padding-top: 5vh; /* Optional: adjust vertical position if needed */
+}
 
 
 .container > div {

@@ -1,7 +1,9 @@
+
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
+  overflow: hidden;
 }
 .background-container {
   position: relative;
@@ -19,7 +21,8 @@ body, html {
   background-color: rgba(0, 0, 0, 0.3); /* Warna hitam transparan */
 }
 .content {
-  position: relative;
+  position: static; /* Ensure it's aligned properly within flexbox */
+  transform: none; /* Remove top and transform properties */
   color: white;
   text-align: center;
   top: 50%;
@@ -40,13 +43,18 @@ body {
 }
 
 .container {
-  height: 100vh;
   margin: 0 auto;
   overflow: hidden;
   position: relative;
   text-align: center;
   visibility: hidden;
   width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full screen height */
+  text-align: center;
+  
 }
 
 .container > div {
